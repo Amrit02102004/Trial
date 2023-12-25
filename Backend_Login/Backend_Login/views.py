@@ -7,11 +7,10 @@ def index(request):
     if request.method == 'POST':
         # Use request.POST for form data or request.body for raw data
         data = request.POST
-        name = data.get('name', '')
-        age = data.get('age', '')
+        name = data.get('name')
 
         # Print the received data in the server console
-        print(f"Received data: Name - {name}, Age - {age}")
+        print(f"Received data: Name - {name}")
 
         # Send a response (modify as needed)
         return JsonResponse({'message': 'Data received successfully'})
